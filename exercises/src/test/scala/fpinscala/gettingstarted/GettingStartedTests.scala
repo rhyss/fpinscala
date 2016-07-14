@@ -17,18 +17,18 @@ class GettingStartedTests extends FlatSpec {
   }
 
   "isSorted" should "return true when an array is sorted according to the comparator" in {
-    isSorted[Int](Array(1, 2, 3), compare)
+    isSorted[Int](Array(1, 2, 3), compare) shouldBe true
   }
 
   "isSorted" should "return false when an array is not according to the comparator" in {
-    isSorted[Int](Array(1, 2, 3, 1), compare)
+    isSorted[Int](Array(1, 2, 3, 1), compare) shouldBe false
   }
 
   "isSorted" should "return true for an empty Array" in {
-    isSorted[Int](Array(), compare)
+    isSorted[Int](Array(), compare) shouldBe true
   }
 
   "isSorted" should "return true for an Array with one element" in {
-    isSorted[Int](Array(1), compare)
+    isSorted[Int](Array(1), compare) shouldBe true
   }
 }
